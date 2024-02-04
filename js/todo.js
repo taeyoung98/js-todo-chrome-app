@@ -23,7 +23,7 @@ function paintToDo(newTodo) {
   const span = document.createElement("span")
   span.innerText = newTodo.text
   const button = document.createElement("button")
-  button.innerText = "❌"
+  button.innerText = "╳"
   button.addEventListener("click", deleteToDo)
   li.appendChild(span)
   li.appendChild(button)
@@ -37,6 +37,11 @@ function handleToDoSubmit(event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
+  }
+
+  if (toDos.length >= 8) {
+    alert("Do them first! Too much!")
+    return
   }
   toDos.push(newTodoObj)
   paintToDo(newTodoObj)
