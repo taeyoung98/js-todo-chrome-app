@@ -114,8 +114,12 @@ body {
   display: flex;
   align-items: center;
 }
+
 #weather span:first-child {
   display: flex;
+}
+#weather span:last-child {
+  margin-left: 5px;
 }
 #weather img {
   height: 30px;
