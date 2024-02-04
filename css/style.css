@@ -1,17 +1,43 @@
+/* global */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
+.hidden {
+  display: none;
+}
+
+input[type="text"] {
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  transition: border-bottom 0.3s ease-out;
+  /* font-family: "Times New Roman", Times, serif; */
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  font-family: cursive;
+}
+input[type="text"]:focus {
+  outline: 0;
+  border-bottom-width: 2px;
+}
+input[type="text"]::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+/* local */
 body {
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   overflow-x: hidden;
   background-size: cover;
   background-attachment: fixed;
   background-origin: border-box;
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
 
   display: flex;
   flex-direction: column;
@@ -19,6 +45,36 @@ body {
   align-items: center;
 }
 
-.hidden {
-  display: none;
+#clock {
+  font-size: 130px;
+  text-shadow: 5px 0px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
+}
+
+#login-form input[type="text"] {
+  width: 150px;
+  font-size: 15px;
+}
+#login-form input[type="submit"] {
+  width: 60px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+  border: 0;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: cursive;
+}
+#greeting {
+  font-size: 24px;
+}
+
+#quote {
+  margin: 10px 0 50px;
+}
+
+#todo-form input[type="text"] {
+  width: 150px;
+  font-size: 15px;
 }
